@@ -1,0 +1,1279 @@
+{
+    "data": [
+        {
+            "traceID": "trace1",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c1"
+                        }
+                    ],
+                    "processID": "p4"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "C"
+                },
+                "p4": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace2",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c2"
+                        }
+                    ],
+                    "processID": "p5"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "C"
+                },
+                "p4": {
+                    "serviceName": "C"
+                },
+                "p5": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace3",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "C"
+                }
+            }
+        },
+        {
+            "traceID": "trace4",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b2"
+                        }
+                    ],
+                    "processID": "p5"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "C"
+                },
+                "p5": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace5",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b2"
+                        }
+                    ],
+                    "processID": "p4"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace6",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b2"
+                        }
+                    ],
+                    "processID": "p4"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "C"
+                }
+            }
+        },
+        {
+            "traceID": "trace7",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p4"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "D"
+                },
+                "p4": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace8",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p5"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c2"
+                        }
+                    ],
+                    "processID": "p6"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "C"
+                },
+                "p4": {
+                    "serviceName": "C"
+                },
+                "p5": {
+                    "serviceName": "D"
+                },
+                "p6": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace9",
+            "spans": [
+                {
+                    "spanID": "b1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "a1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p5"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c1"
+                        }
+                    ],
+                    "processID": "p6"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "B"
+                },
+                "p2": {
+                    "serviceName": "A"
+                },
+                "p3": {
+                    "serviceName": "C"
+                },
+                "p4": {
+                    "serviceName": "D"
+                },
+                "p5": {
+                    "serviceName": "C"
+                },
+                "p6": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace10",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p5"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c2"
+                        }
+                    ],
+                    "processID": "p6"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "C"
+                },
+                "p4": {
+                    "serviceName": "C"
+                },
+                "p5": {
+                    "serviceName": "D"
+                },
+                "p6": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace11",
+            "spans": [
+                {
+                    "spanID": "d1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "a1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p2"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "D"
+                },
+                "p2": {
+                    "serviceName": "A"
+                }
+            }
+        },
+        {
+            "traceID": "trace12",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p5"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c2"
+                        }
+                    ],
+                    "processID": "p6"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "D"
+                },
+                "p5": {
+                    "serviceName": "C"
+                },
+                "p6": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace13",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p5"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c2"
+                        }
+                    ],
+                    "processID": "p6"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "D"
+                },
+                "p5": {
+                    "serviceName": "C"
+                },
+                "p6": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace14",
+            "spans": [
+                {
+                    "spanID": "d1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "a1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p2"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "B"
+                },
+                "p3": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace15",
+            "spans": [
+                {
+                    "spanID": "b1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p2"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "B"
+                },
+                "p2": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace16",
+            "spans": [
+                {
+                    "spanID": "b1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p2"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "B"
+                },
+                "p2": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace17",
+            "spans": [
+                {
+                    "spanID": "b1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "B"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "C"
+                }
+            }
+        },
+        {
+            "traceID": "trace18",
+            "spans": [
+                {
+                    "spanID": "b1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "B"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "C"
+                }
+            }
+        },
+        {
+            "traceID": "trace19",
+            "spans": [
+                {
+                    "spanID": "d1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "a1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p2"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "D"
+                },
+                "p2": {
+                    "serviceName": "A"
+                }
+            }
+        },
+        {
+            "traceID": "trace20",
+            "spans": [
+                {
+                    "spanID": "b1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "a1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "a2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "a3",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a3"
+                        }
+                    ],
+                    "processID": "p5"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "B"
+                },
+                "p2": {
+                    "serviceName": "A"
+                },
+                "p3": {
+                    "serviceName": "A"
+                },
+                "p4": {
+                    "serviceName": "A"
+                },
+                "p5": {
+                    "serviceName": "C"
+                }
+            }
+        },
+        {
+            "traceID": "trace21",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace22",
+            "spans": [
+                {
+                    "spanID": "d1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "a1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b1"
+                        }
+                    ],
+                    "processID": "p4"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "D"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "B"
+                },
+                "p4": {
+                    "serviceName": "A"
+                }
+            }
+        },
+        {
+            "traceID": "trace23",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "b1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c1"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "d2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "d1"
+                        }
+                    ],
+                    "processID": "p5"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "C"
+                },
+                "p3": {
+                    "serviceName": "D"
+                },
+                "p4": {
+                    "serviceName": "B"
+                },
+                "p5": {
+                    "serviceName": "D"
+                }
+            }
+        },
+        {
+            "traceID": "trace24",
+            "spans": [
+                {
+                    "spanID": "a1",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "d1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a1"
+                        }
+                    ],
+                    "processID": "p3"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "A"
+                },
+                "p2": {
+                    "serviceName": "D"
+                },
+                "p3": {
+                    "serviceName": "C"
+                }
+            }
+        }
+    ]
+}

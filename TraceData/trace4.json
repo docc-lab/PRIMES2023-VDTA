@@ -1,0 +1,118 @@
+{
+    "data": [
+        {
+            "traceID": "2739abv293bn23456782",
+            "spans": [
+                {
+                    "spanID": "a2312512415",
+                    "traceID": "2739abv293bn23456782",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "b69273402735",
+                    "traceID": "2739abv293bn23456782",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "a2312512415"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "c12563543523434",
+                    "traceID": "2739abv293bn23456782",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b69273402735"
+                        }
+                    ],
+                    "processID": "p3"
+                },
+                {
+                    "spanID": "d68392049538467",
+                    "traceID": "2739abv293bn23456782",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "b69273402735"
+                        }
+                    ],
+                    "processID": "p4"
+                },
+                {
+                    "spanID": "e098765367859948736",
+                    "traceID": "2739abv293bn23456782",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "c12563543523434"
+                        }
+                    ],
+                    "processID": "p5"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "Front End"
+                },
+                "p2": {
+                    "serviceName": "Feed"
+                },
+                "p3": {
+                    "serviceName": "Friends"
+                },
+                "p4": {
+                    "serviceName": "Post"
+                },
+                "p5": {
+                    "serviceName": "Friends Database"
+                }
+            }
+        },
+        {
+            "traceID": "268927abnc124",
+            "spans": [
+                {
+                    "spanID": "f5678948736278457",
+                    "traceID": "268927abnc124",
+                    "processID": "p1"
+                },
+                {
+                    "spanID": "g4577652345352",
+                    "traceID": "268927abnc124",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "f5678948736278457"
+                        }
+                    ],
+                    "processID": "p2"
+                },
+                {
+                    "spanID": "h09876567283525",
+                    "traceID": "268927abnc124",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "spanID": "g4577652345352"
+                        }
+                    ],
+                    "processID": "p3"
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "Front End"
+                },
+                "p2": {
+                    "serviceName": "Friends"
+                },
+                "p3": {
+                    "serviceName": "Friends Database"
+                }
+            }
+        }
+    ]
+}
